@@ -1,7 +1,7 @@
 <?php 
 
 require("conn.php");
-
+session_start();
 
 
 if (isset($_POST['submit'])){
@@ -12,7 +12,6 @@ if (isset($_POST['submit'])){
     $result = mysqli_query($conn,$query);
 
     if (mysqli_num_rows($result) >= 0){
-        session_start();
         echo("Login Successful");
     }
     else{
