@@ -1,3 +1,4 @@
+<?php
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");
@@ -11,3 +12,4 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
+?>
