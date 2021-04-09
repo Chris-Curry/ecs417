@@ -26,17 +26,17 @@
         <img id="bg" src="site-background.jpg" height="99.99%" width="99.99%">
 
         <div class="loginform">
-            <form method="GET" action="login.php">
+            <form method="POST" action="login.php">
                 <fieldset>
                     <legend>Login</legend>
                     <p>
-                        <label>Username:</label>
-                        <input type="text" name="username">
+                        <label>Email:</label>
+                        <input type="text" name="email">
                     </p>
                     <p>
                         <label>Password:</label>
                         <input type="password" name="password">
-                        <input type="submit">
+                        <input type="submit" value="Login" name="submit">
                     </p>
                 </fieldset>
             </form>
