@@ -11,7 +11,7 @@ if (isset($_POST['submit'])){
     echo $query;
     $result = mysqli_query($conn,$query);
 
-    if (mysqli_num_rows($result) >= 0){
+    if (mysqli_num_rows($result) > 0){
         echo("Login Successful");
     }
     else{
