@@ -1,0 +1,55 @@
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+center,
+ul,
+li,
+label,
+table,
+article,
+aside,
+footer,
+header,
+hgroup,
+menu,
+output,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
