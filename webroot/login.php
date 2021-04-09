@@ -16,7 +16,7 @@ if (isset($_POST['submit'])){
         echo("Login Successful");
     }
     else{
-        die("Login Failed");
+        echo("Login Failed");
     }
 }
 
