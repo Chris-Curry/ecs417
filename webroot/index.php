@@ -1,40 +1,53 @@
-<?php
-/**
- * The Front Controller for handling every request
- *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.2.9
- * @license       MIT License (https://opensource.org/licenses/mit-license.php)
- */
+<!DOCTYPE html>
+<html lang="en">
 
-// Check platform requirements
-require dirname(__DIR__) . '/config/requirements.php';
+<head>
+    <script src="js/scripts.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Portfolio | Home</title>
+</head>
 
-// For built-in server
-if (php_sapi_name() === 'cli-server') {
-    $_SERVER['PHP_SELF'] = '/' . basename(__FILE__);
+<nav>
+    <ul>
+        <li><a href="index.html" class="class1">Home</a></li>
+        <li><a href="about.html" class="class1">About Me</a></li>
+        <li><a href="experience.html" class="class1">Experience</a></li>
+        <li><a href="skills.html" class="class1">Skills</a></li>
+        <li><a href="education.html" class="class1">Education</a></li>
+        <li><a href="blog.html" class="class1">Blog</a></li>
+    </ul>
+</nav>
 
-    $url = parse_url(urldecode($_SERVER['REQUEST_URI']));
-    $file = __DIR__ . $url['path'];
-    if (strpos($url['path'], '..') === false && strpos($url['path'], '.') !== false && is_file($file)) {
-        return false;
-    }
-}
-require dirname(__DIR__) . '/vendor/autoload.php';
+<body class="home">
+    <div id="container">
 
-use App\Application;
-use Cake\Http\Server;
+        <img id="bg" src="site-background.jpg" height="99.99%" width="99.99%">
 
-// Bind your application to the server.
-$server = new Server(new Application(dirname(__DIR__) . '/config'));
+        <div class="midtext">
+            <h1 class="blocktexthome">Chris Curry</h1>
 
-// Run the request/response through the application and emit the response.
-$server->emit($server->run());
+        <?php
+            if (isset($_SESSION['loggedin'])){
+                echo('<a href="logout.php"> Logout</a>');
+            }
+            else{
+                echo('<a href = "login.php"> Login</a>');
+            }            
+        ?>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2021 Chris Curry.
+            <script type="text/javascript">
+                var currentTime = new Date();
+                document.write(currentTime);
+            </script>
+        </p>
+    </footer>
+</body>
+
+
+</html>
