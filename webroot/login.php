@@ -16,7 +16,9 @@ if (isset($_POST['submit'])){
         header("location:blog.html");
     }
     else{
-        echo("Login Failed");
+        
+        header("location:login.html");
+        echo '<script>alert("Login failed, try again.")</script>';
     }
 }
 
