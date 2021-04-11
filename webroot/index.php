@@ -29,6 +29,7 @@
             <h1 class="blocktexthome">Chris Curry</h1>
 
         <?php
+        session_start();
             if (isset($_SESSION['loggedin'])){
                 echo('<a href="logout.php"> Logout</a>');
             }
