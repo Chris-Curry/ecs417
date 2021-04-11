@@ -31,7 +31,7 @@
         <?php
         session_start();
             if (isset($_SESSION['loggedin'])){
-                echo('<a class="logginButton" href="logout.php"> Logout</a>');
+                echo('<a class="loginButton" href="logout.php"> Logout</a>');
             }
             else{
                 echo('<a class="loginButton" href="login.html"> Login</a>');

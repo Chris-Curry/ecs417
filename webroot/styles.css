@@ -286,7 +286,7 @@ h1.blocktext {
     opacity: 0.95;
 }
 
-h3.loginButton {
+a.loginButton {
     text-align: center;
     margin-left: 54.5%;
     margin-top: 59%;
