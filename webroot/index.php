@@ -31,10 +31,10 @@
         <?php
         session_start();
             if (isset($_SESSION['loggedin'])){
-                echo('<a href="logout.php"> Logout</a>');
+                echo('<a class="logginButton" href="logout.php"> Logout</a>');
             }
             else{
-                echo('<a href = "login.html"> Login</a>');
+                echo('<a class="loginButton" href="login.html"> Login</a>');
             }            
         ?>
         </div>
