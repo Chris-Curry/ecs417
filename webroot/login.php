@@ -3,6 +3,11 @@
 require("conn.php");
 session_start();
 
+function function_alert($message) {
+      
+    echo "<script>alert('$message');</script>";
+}
+  
 
 if (isset($_POST['submit'])){
     $email = $_POST['email'];
@@ -18,7 +23,7 @@ if (isset($_POST['submit'])){
     else{
         
         header("location:login.html");
-        echo '<script>alert("Login failed, try again.")</script>';
+        function_alert("Login failed, try again.");
     }
 }
 
