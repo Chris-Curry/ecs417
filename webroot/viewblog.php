@@ -42,7 +42,7 @@
         $text[] = array();
         $time[] = time();
 
-        if ($result = mysqli_query($conn,$query)){
+        if ($result = mysqli_query($conn,$sql)){
             while($row = mysqli_fetch_assoc($result)){
                 $title[] = $row['title'];
                 $text[] = $row['text'];
