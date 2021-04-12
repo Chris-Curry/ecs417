@@ -43,7 +43,7 @@
         $time[] = time();
 
         if ($result = mysqli_query($conn,$sql)){
-            while($row = mysqli_fetch_assoc($result)){
+            while($row = mysqli_fetch_array($result)){
                 $title[] = $row['title'];
                 $text[] = $row['text'];
                 $time[] = $row['time'];
@@ -51,9 +51,9 @@
             }
             
         }   
-        echo'$title[0]';
-        echo'$text[0]';
-        echo'$time[0]';
+        echo($title[0]);
+        echo($text[0]);
+        echo($time[0]);
 
 
         ?>
