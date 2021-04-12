@@ -43,12 +43,20 @@
         $time[] = time();
 
         if ($result = mysqli_query($conn,$sql)){
-            while($row = mysqli_fetch_array($result)){
-                $title[] = $row['title'];
-                $text[] = $row['text'];
-                $time[] = $row['time'];
+            // while($row = mysqli_fetch_array($result)){
+            //     $title[] = $row['title'];
+            //     $text[] = $row['text'];
+            //     $time[] = $row['time'];
 
+            // }
+
+            echo "<table>"; // start a table tag in the HTML
+
+            while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+            echo "<tr><td>" . $row['title'] . "</td><td>" . $row['text'] . "</td></tr>";  //$row['index'] the index here is a field name
             }
+
+echo "</table>"; //Close the table in HTML
             
         }   
         echo($title[0]);
