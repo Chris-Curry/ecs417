@@ -41,18 +41,19 @@
         $title[] = array();
         $text[] = array();
         $time[] = time();
+        $id[] = array();
 
         if ($result = mysqli_query($conn,$sql)){
-            // while($row = mysqli_fetch_array($result)){
-            //     $title[] = $row['title'];
-            //     $text[] = $row['text'];
-            //     $time[] = $row['time'];
-
-            // }
-
-           
 
             while($row = mysqli_fetch_array($result)){
+            function cmp($id, $b)
+            {
+                if ($id == $b) {
+                    return 0;
+                }
+                return ($id < $b) ? -1 : 1;
+            }
+                usort($id, "cmp");
             echo $row['title'] . '<br>' . $row['text'] .'<br>'. $row['time'] . '<br>' . '<br>' . '<br>';
             }
 
