@@ -53,7 +53,7 @@
            
 
             while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-            echo $row['title'] . $row['text'];  //$row['index'] the index here is a field name
+            echo $row['title'] . $row['text'] . $row['time'];  //$row['index'] the index here is a field name
             }
 
             
