@@ -9,7 +9,8 @@ if (isset($_POST['submit'])){
 
     $sql = "INSERT INTO BLOGS (title, text, time)
     VALUES ('$title', '$text', '$date')";
-
+    mysqli_query($conn,$sql);
+    
     echo("Blog posted Successful");
     header("location:viewblog.html");
 }

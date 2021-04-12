@@ -19,7 +19,9 @@
         <li><a href="blog.html" class="class1">Blog</a></li>
     </ul>
 </nav>
-
+<?php
+        session_start();
+        ?>
 <body class="home">
     <div id="container">
 
