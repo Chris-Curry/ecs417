@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Portfolio | Add Blog Post</title>
+    <title>Portfolio | Blog</title>
 </head>
 
 <nav>
@@ -25,23 +25,8 @@
 
         <img id="bg" src="site-background.jpg" height="99.99%" width="99.99%">
 
-        <div class="blogPostForm">
-            <form name="blogForm" method="POST" action="addpost.php">
-                <fieldset>
-                    <legend>Post Blog</legend>
-                    <p>
-                        <label>Title</label>
-                        <input type="text" name="blogTitle" placeholder="Blog title" id="title">
-                    </p>
-                    <p>
-                        <label>Content</label>
-                        <input class="blogpostbox" type="textarea" name="text" placeholder="Enter your text here" id="blogContent">
-                        <input type="submit" value="Post" onclick="validateForm()" id="submitButton">
-                        <input type="reset" value="Clear" onclick="clearForm()">
-                    </p>
-                </fieldset>
-            </form>
-        </div>
+        <!-- BLOG POSTS HERE -->
+        
     </div>
 
     <footer>
