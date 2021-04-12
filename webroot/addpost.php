@@ -11,6 +11,7 @@ if (isset($_POST['submit'])){
     VALUES ('$title', '$text', '$date')";
     mysqli_query($conn,$sql);
 
+    echo($sql);
     echo("Blog posted Successful");
     header("location:viewblog.html");
 }
@@ -18,5 +19,6 @@ else{
     echo("Blog post failed");
     header("location:blog.html");
 }
+
 
 ?>
