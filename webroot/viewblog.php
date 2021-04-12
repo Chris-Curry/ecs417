@@ -47,7 +47,7 @@
 
             while($row = mysqli_fetch_array($result)){
 
-            echo ('id=aboutMeText' . $row['title'] . '<br>' . $row['text'] .'<br>'. $row['time'] . '<br>' . '<br>' . '<br>');
+            echo ($row['title'] . '<br>' . $row['text'] .'<br>'. $row['time'] . '<br>' . '<br>' . '<br>');
             }
 
             
