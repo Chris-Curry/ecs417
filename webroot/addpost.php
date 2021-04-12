@@ -2,6 +2,12 @@
 require("conn.php");
 session_start();
 
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("DATABASE_USER");
+$dbpwd = getenv("DATABASE_PASSWORD");
+$dbname = getenv("DATABASE_NAME");
+
 if (isset($_POST['submit'])){
     $title = $_POST['blogTitle'];
     $text = $_POST['blogText'];
