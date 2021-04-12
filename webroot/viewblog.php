@@ -43,20 +43,20 @@
         $time[] = time();
 
         if ($result = mysqli_query($conn,$sql)){
-            // while($row = mysqli_fetch_assoc($result)){
-            //     $title[] = $row['title'];
-            //     $text[] = $row['text'];
-            //     $time[] = $row['time'];
+            while($row = mysqli_fetch_assoc($result)){
+                $title[] = $row['title'];
+                $text[] = $row['text'];
+                $time[] = $row['time'];
 
-            // }
-            while ($row = $result->fetch_assoc()) {
-                printf("%s (%s)\n", $row["Name"], $row["CountryCode"]);
             }
             
         }   
         echo($title[0]);
         echo($text[0]);
         echo($time[0]);
+        print_r($title[0]);
+        print_r($text[0]);
+        print_r($time[0]);
 
         ?>
 
