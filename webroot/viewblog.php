@@ -51,12 +51,10 @@
             }
             
         }   
-        echo($title[0]);
-        echo($text[0]);
-        echo($time[0]);
-        print_r($title[0]);
-        print_r($text[0]);
-        print_r($time[0]);
+        echo'$title[0]';
+        echo'$text[0]';
+        echo'$time[0]';
+
 
         ?>
 
