@@ -11,7 +11,7 @@ function validateForm() {
         if (inputTitle.value === '' || blogContent.value === '') {
             title.setAttribute("style", "box-shadow: 0 0 10px red;");
             inputContent.setAttribute("style", "box-shadow: 0 0 10px red;");
-            //event.preventDefault();
+            event.preventDefault();
         } else {
 
         }
