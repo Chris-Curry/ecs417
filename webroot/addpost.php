@@ -8,7 +8,7 @@ $dbuser = getenv("DATABASE_USER");
 $dbpwd = getenv("DATABASE_PASSWORD");
 $dbname = getenv("DATABASE_NAME");
 
-if (isset($_POST['submit'])){
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $title = $_POST['blogTitle'];
     $text = $_POST['blogText'];
     $date = date("d-m-y");
@@ -18,8 +18,8 @@ if (isset($_POST['submit'])){
     mysqli_query($conn,$sql);
 
     echo($sql);
-    echo("Blog posted Successful");
     header("location:viewblog.php");
+    echo("Blog posted Successful");
 }
 else{
     echo("Blog post failed");
