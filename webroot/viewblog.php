@@ -26,7 +26,37 @@
         <img id="bg" src="site-background.jpg" height="99.99%" width="99.99%">
 
         <!-- BLOG POSTS HERE -->
+        <?php 
+        require("conn.php");
+        session_start();
+
+        $dbhost = getenv("MYSQL_SERVICE_HOST");
+        $dbport = getenv("MYSQL_SERVICE_PORT");
+        $dbuser = getenv("DATABASE_USER");
+        $dbpwd = getenv("DATABASE_PASSWORD");
+        $dbname = getenv("DATABASE_NAME"); 
         
+        $sql = 'SELECT * from BLOGS';
+
+        $title[] = array();
+        $text[] = array();
+        $time[] = time();
+
+        if ($result = mysqli_query($conn,$query)){
+            while($row = mysqli_fetch_assoc($result)){
+                $title[] = $row['title'];
+                $text[] = $row['text'];
+                $time[] = $row['time'];
+
+            }
+            
+        }   
+        echo($title[0]);
+        echo($text[0]);
+        echo($time[0]);
+
+        ?>
+
     </div>
 
     <footer>
