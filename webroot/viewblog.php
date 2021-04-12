@@ -50,13 +50,12 @@
 
             // }
 
-            echo "<table>"; // start a table tag in the HTML
+           
 
             while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-            echo "<tr><td>" . $row['title'] . "</td><td>" . $row['text'] . "</td></tr>";  //$row['index'] the index here is a field name
+            echo $row['title'] . $row['text'];  //$row['index'] the index here is a field name
             }
 
-echo "</table>"; //Close the table in HTML
             
         }   
         echo($title[0]);
