@@ -11,7 +11,7 @@ $dbname = getenv("DATABASE_NAME");
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $title = $_POST['blogTitle'];
     $text = $_POST['blogText'];
-    $date = date("d-m-y");
+    $date = date("l jS \of F Y h:i:s A");
 
     $sql = "INSERT INTO BLOGS (title, text, time)
     VALUES ('$title', '$text', '$date')";
