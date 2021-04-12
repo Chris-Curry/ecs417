@@ -52,16 +52,12 @@
 
            
 
-            while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-            echo $row['title'] . $row['text'] . $row['time'];  //$row['index'] the index here is a field name
+            while($row = mysqli_fetch_array($result)){
+            echo $row['title'] . '<br>' . $row['text'] .'<br>'. $row['time'] . '<br>' . '<br>' . '<br>';
             }
 
             
         }   
-        echo($title[0]);
-        echo($text[0]);
-        echo($time[0]);
-
 
         ?>
 
