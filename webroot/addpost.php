@@ -19,7 +19,7 @@ if (isset($_POST['submit'])){
 
     echo($sql);
     echo("Blog posted Successful");
-    header("location:viewblog.html");
+    header("location:viewblog.php");
 }
 else{
     echo("Blog post failed");
